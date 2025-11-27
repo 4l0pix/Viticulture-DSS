@@ -1,49 +1,49 @@
 {
-  "target_date": "2025-11-21",
+  "target_date": "2025-11-04",
   "water_prescription": {
-    "zone_1": 9.53,
-    "zone_2": 9.81,
+    "zone_1": 9.7,
+    "zone_2": 10.0,
     "zone_3": 10.0,
-    "zone_4": 10.0,
-    "zone_5": 9.9,
-    "zone_6": 9.88,
-    "zone_7": 9.85
+    "zone_4": 9.9,
+    "zone_5": 9.58,
+    "zone_6": 9.73,
+    "zone_7": 10.0
   },
   "fertilizer_prescription": {
     "zone_1": {
       "N": 0.0,
-      "P": 0.75,
-      "K": 3.12
+      "P": 0.61,
+      "K": 2.06
     },
     "zone_2": {
       "N": 0.0,
-      "P": 0.39,
-      "K": 0.99
+      "P": 0.51,
+      "K": 1.13
     },
     "zone_3": {
       "N": 0.0,
-      "P": 0.5,
-      "K": 3.65
+      "P": 0.53,
+      "K": 3.29
     },
     "zone_4": {
       "N": 0.0,
-      "P": 0.45,
-      "K": 1.52
+      "P": 0.42,
+      "K": 0.9
     },
     "zone_5": {
-      "N": 0.0,
-      "P": 0.65,
-      "K": 1.98
+      "N": 0.23,
+      "P": 0.63,
+      "K": 1.91
     },
     "zone_6": {
       "N": 0.0,
-      "P": 0.52,
-      "K": 3.23
+      "P": 0.37,
+      "K": 3.34
     },
     "zone_7": {
-      "N": 0.0,
-      "P": 0.68,
-      "K": 1.66
+      "N": 0.18,
+      "P": 0.38,
+      "K": 4.06
     }
   },
   "sensor_water_needs": {
@@ -53,9 +53,9 @@
       "current_moisture": 10.0
     },
     "S1_2": {
-      "water_mm": 7.66,
+      "water_mm": 8.87,
       "zone_id": "zone_1",
-      "current_moisture": 12.34
+      "current_moisture": 11.13
     },
     "S1_3": {
       "water_mm": 10.0,
@@ -68,14 +68,14 @@
       "current_moisture": 10.0
     },
     "S1_5": {
-      "water_mm": 10.0,
+      "water_mm": 9.61,
       "zone_id": "zone_1",
-      "current_moisture": 10.0
+      "current_moisture": 10.39
     },
     "S2_1": {
-      "water_mm": 9.79,
+      "water_mm": 10.0,
       "zone_id": "zone_2",
-      "current_moisture": 10.21
+      "current_moisture": 10.0
     },
     "S2_2": {
       "water_mm": 10.0,
@@ -83,9 +83,9 @@
       "current_moisture": 10.0
     },
     "S2_3": {
-      "water_mm": 9.25,
+      "water_mm": 10.0,
       "zone_id": "zone_2",
-      "current_moisture": 10.75
+      "current_moisture": 10.0
     },
     "S2_4": {
       "water_mm": 10.0,
@@ -128,9 +128,9 @@
       "current_moisture": 10.0
     },
     "S4_2": {
-      "water_mm": 10.0,
+      "water_mm": 9.6,
       "zone_id": "zone_4",
-      "current_moisture": 10.0
+      "current_moisture": 10.4
     },
     "S4_3": {
       "water_mm": 10.0,
@@ -148,9 +148,9 @@
       "current_moisture": 10.0
     },
     "S5_2": {
-      "water_mm": 10.0,
+      "water_mm": 9.86,
       "zone_id": "zone_5",
-      "current_moisture": 10.0
+      "current_moisture": 10.14
     },
     "S5_3": {
       "water_mm": 10.0,
@@ -163,9 +163,9 @@
       "current_moisture": 10.0
     },
     "S5_5": {
-      "water_mm": 9.51,
+      "water_mm": 8.04,
       "zone_id": "zone_5",
-      "current_moisture": 10.49
+      "current_moisture": 11.96
     },
     "S6_1": {
       "water_mm": 10.0,
@@ -178,9 +178,9 @@
       "current_moisture": 10.0
     },
     "S6_3": {
-      "water_mm": 10.0,
+      "water_mm": 7.55,
       "zone_id": "zone_6",
-      "current_moisture": 10.0
+      "current_moisture": 12.45
     },
     "S6_4": {
       "water_mm": 10.0,
@@ -193,9 +193,9 @@
       "current_moisture": 10.0
     },
     "S6_6": {
-      "water_mm": 9.98,
+      "water_mm": 10.0,
       "zone_id": "zone_6",
-      "current_moisture": 10.02
+      "current_moisture": 10.0
     },
     "S6_7": {
       "water_mm": 10.0,
@@ -208,9 +208,9 @@
       "current_moisture": 10.0
     },
     "S6_9": {
-      "water_mm": 8.93,
+      "water_mm": 10.0,
       "zone_id": "zone_6",
-      "current_moisture": 11.07
+      "current_moisture": 10.0
     },
     "S7_1": {
       "water_mm": 10.0,
@@ -228,9 +228,9 @@
       "current_moisture": 10.0
     },
     "S7_4": {
-      "water_mm": 8.63,
+      "water_mm": 10.0,
       "zone_id": "zone_7",
-      "current_moisture": 11.37
+      "current_moisture": 10.0
     },
     "S7_5": {
       "water_mm": 10.0,
@@ -261,396 +261,396 @@
   "sensor_fertilizer_needs": {
     "S1_1": {
       "N": 0,
-      "P": 0.93,
-      "K": 4.45,
+      "P": 0.5,
+      "K": 2.94,
       "zone_id": "zone_1",
-      "current_N": 50.0,
-      "current_P": 12.69,
-      "current_K": 155.47
+      "current_N": 46.93,
+      "current_P": 16.97,
+      "current_K": 170.61
     },
     "S1_2": {
       "N": 0,
-      "P": 1.2,
-      "K": 0.15,
+      "P": 1.17,
+      "K": 0,
       "zone_id": "zone_1",
-      "current_N": 45.15,
-      "current_P": 10.0,
-      "current_K": 198.51
+      "current_N": 32.4,
+      "current_P": 10.28,
+      "current_K": 234.38
     },
     "S1_3": {
       "N": 0,
-      "P": 0.83,
-      "K": 2.57,
+      "P": 0.49,
+      "K": 1.39,
       "zone_id": "zone_1",
       "current_N": 50.0,
-      "current_P": 13.7,
-      "current_K": 174.25
+      "current_P": 17.1,
+      "current_K": 186.1
     },
     "S1_4": {
       "N": 0,
-      "P": 0.57,
-      "K": 0.44,
+      "P": 0.88,
+      "K": 0.72,
       "zone_id": "zone_1",
-      "current_N": 41.86,
-      "current_P": 16.27,
-      "current_K": 195.64
+      "current_N": 42.48,
+      "current_P": 13.16,
+      "current_K": 192.77
     },
     "S1_5": {
       "N": 0,
-      "P": 0.2,
-      "K": 8.0,
+      "P": 0,
+      "K": 5.26,
       "zone_id": "zone_1",
-      "current_N": 40.14,
-      "current_P": 19.96,
-      "current_K": 120.0
+      "current_N": 35.79,
+      "current_P": 24.54,
+      "current_K": 147.42
     },
     "S2_1": {
       "N": 0,
-      "P": 0.1,
+      "P": 0.42,
       "K": 0,
       "zone_id": "zone_2",
-      "current_N": 50.0,
-      "current_P": 20.98,
-      "current_K": 232.17
+      "current_N": 43.64,
+      "current_P": 17.79,
+      "current_K": 229.48
     },
     "S2_2": {
       "N": 0,
-      "P": 1.2,
-      "K": 2.84,
+      "P": 0.69,
+      "K": 5.44,
       "zone_id": "zone_2",
-      "current_N": 45.38,
-      "current_P": 10.0,
-      "current_K": 171.58
+      "current_N": 39.98,
+      "current_P": 15.09,
+      "current_K": 145.61
     },
     "S2_3": {
       "N": 0,
-      "P": 0.21,
-      "K": 0,
+      "P": 0.59,
+      "K": 0.02,
       "zone_id": "zone_2",
-      "current_N": 48.55,
-      "current_P": 19.94,
-      "current_K": 208.57
+      "current_N": 44.3,
+      "current_P": 16.09,
+      "current_K": 199.76
     },
     "S2_4": {
       "N": 0,
-      "P": 0.45,
-      "K": 0,
+      "P": 0.3,
+      "K": 0.14,
       "zone_id": "zone_2",
-      "current_N": 49.25,
-      "current_P": 17.47,
-      "current_K": 204.54
+      "current_N": 33.11,
+      "current_P": 18.97,
+      "current_K": 198.65
     },
     "S2_5": {
       "N": 0,
-      "P": 0,
-      "K": 2.1,
+      "P": 0.53,
+      "K": 0.07,
       "zone_id": "zone_2",
-      "current_N": 50.0,
-      "current_P": 22.13,
-      "current_K": 179.02
+      "current_N": 44.4,
+      "current_P": 16.68,
+      "current_K": 199.32
     },
     "S3_1": {
       "N": 0,
-      "P": 1.18,
-      "K": 2.14,
+      "P": 0.4,
+      "K": 4.79,
       "zone_id": "zone_3",
-      "current_N": 48.62,
-      "current_P": 10.23,
-      "current_K": 178.61
+      "current_N": 49.95,
+      "current_P": 18.01,
+      "current_K": 152.12
     },
     "S3_2": {
       "N": 0,
       "P": 0,
-      "K": 4.65,
+      "K": 0,
       "zone_id": "zone_3",
-      "current_N": 47.69,
-      "current_P": 29.21,
-      "current_K": 153.5
+      "current_N": 41.22,
+      "current_P": 29.1,
+      "current_K": 201.08
     },
     "S3_3": {
       "N": 0,
-      "P": 0.56,
-      "K": 3.46,
+      "P": 0.86,
+      "K": 8.0,
       "zone_id": "zone_3",
-      "current_N": 50.0,
-      "current_P": 16.43,
-      "current_K": 165.42
+      "current_N": 45.77,
+      "current_P": 13.42,
+      "current_K": 120.0
     },
     "S3_4": {
       "N": 0,
-      "P": 0.35,
+      "P": 0.58,
       "K": 0,
       "zone_id": "zone_3",
-      "current_N": 50.0,
-      "current_P": 18.52,
-      "current_K": 201.42
+      "current_N": 45.35,
+      "current_P": 16.17,
+      "current_K": 266.29
     },
     "S3_5": {
       "N": 0,
-      "P": 0.39,
-      "K": 8.0,
+      "P": 0.79,
+      "K": 3.66,
       "zone_id": "zone_3",
-      "current_N": 50.0,
-      "current_P": 18.05,
-      "current_K": 120.0
+      "current_N": 44.63,
+      "current_P": 14.05,
+      "current_K": 163.41
     },
     "S4_1": {
       "N": 0,
-      "P": 0.82,
+      "P": 0.69,
       "K": 0,
       "zone_id": "zone_4",
-      "current_N": 48.67,
-      "current_P": 13.78,
-      "current_K": 216.23
+      "current_N": 45.72,
+      "current_P": 15.08,
+      "current_K": 211.22
     },
     "S4_2": {
       "N": 0,
-      "P": 0.13,
-      "K": 5.86,
+      "P": 0,
+      "K": 0.01,
       "zone_id": "zone_4",
-      "current_N": 42.57,
-      "current_P": 20.72,
-      "current_K": 141.37
+      "current_N": 47.23,
+      "current_P": 22.44,
+      "current_K": 199.91
     },
     "S4_3": {
       "N": 0,
-      "P": 0.29,
+      "P": 0.24,
       "K": 0,
       "zone_id": "zone_4",
-      "current_N": 42.77,
-      "current_P": 19.07,
-      "current_K": 228.67
+      "current_N": 44.66,
+      "current_P": 19.56,
+      "current_K": 212.35
     },
     "S4_4": {
       "N": 0,
-      "P": 0.54,
-      "K": 0.21,
+      "P": 0.73,
+      "K": 3.61,
       "zone_id": "zone_4",
-      "current_N": 38.67,
-      "current_P": 16.57,
-      "current_K": 197.87
+      "current_N": 43.1,
+      "current_P": 14.68,
+      "current_K": 163.91
     },
     "S5_1": {
-      "N": 0,
-      "P": 0.67,
-      "K": 0.72,
+      "N": 1.13,
+      "P": 0.84,
+      "K": 1.66,
       "zone_id": "zone_5",
-      "current_N": 31.78,
-      "current_P": 15.33,
-      "current_K": 192.76
+      "current_N": 18.72,
+      "current_P": 13.57,
+      "current_K": 183.4
     },
     "S5_2": {
       "N": 0,
-      "P": 0.95,
-      "K": 5.71,
+      "P": 0.97,
+      "K": 0,
       "zone_id": "zone_5",
-      "current_N": 46.36,
-      "current_P": 12.49,
-      "current_K": 142.94
+      "current_N": 43.82,
+      "current_P": 12.35,
+      "current_K": 203.32
     },
     "S5_3": {
       "N": 0,
-      "P": 0.88,
-      "K": 3.47,
+      "P": 0.09,
+      "K": 3.66,
       "zone_id": "zone_5",
-      "current_N": 44.05,
-      "current_P": 13.24,
-      "current_K": 165.26
+      "current_N": 33.22,
+      "current_P": 21.06,
+      "current_K": 163.37
     },
     "S5_4": {
       "N": 0,
-      "P": 0.75,
-      "K": 0,
+      "P": 0.85,
+      "K": 1.55,
       "zone_id": "zone_5",
-      "current_N": 47.37,
-      "current_P": 14.48,
-      "current_K": 203.06
+      "current_N": 40.23,
+      "current_P": 13.5,
+      "current_K": 184.48
     },
     "S5_5": {
       "N": 0,
-      "P": 0,
-      "K": 0,
+      "P": 0.41,
+      "K": 2.67,
       "zone_id": "zone_5",
-      "current_N": 46.06,
-      "current_P": 23.85,
-      "current_K": 210.95
+      "current_N": 44.87,
+      "current_P": 17.9,
+      "current_K": 173.26
     },
     "S6_1": {
       "N": 0,
-      "P": 0.32,
-      "K": 5.26,
+      "P": 0,
+      "K": 6.07,
       "zone_id": "zone_6",
-      "current_N": 45.41,
-      "current_P": 18.84,
-      "current_K": 147.43
+      "current_N": 46.24,
+      "current_P": 22.46,
+      "current_K": 139.31
     },
     "S6_2": {
       "N": 0,
-      "P": 0.26,
-      "K": 3.07,
+      "P": 0,
+      "K": 4.67,
       "zone_id": "zone_6",
-      "current_N": 48.71,
-      "current_P": 19.39,
-      "current_K": 169.28
+      "current_N": 43.32,
+      "current_P": 22.99,
+      "current_K": 153.35
     },
     "S6_3": {
       "N": 0,
-      "P": 0.17,
+      "P": 0.15,
       "K": 0,
       "zone_id": "zone_6",
-      "current_N": 32.14,
-      "current_P": 20.3,
-      "current_K": 217.2
+      "current_N": 30.98,
+      "current_P": 20.53,
+      "current_K": 232.38
     },
     "S6_4": {
       "N": 0,
-      "P": 0.77,
-      "K": 2.57,
+      "P": 0.52,
+      "K": 2.63,
       "zone_id": "zone_6",
-      "current_N": 41.97,
-      "current_P": 14.35,
-      "current_K": 174.25
+      "current_N": 44.97,
+      "current_P": 16.83,
+      "current_K": 173.71
     },
     "S6_5": {
       "N": 0,
-      "P": 0.95,
-      "K": 3.47,
+      "P": 1.18,
+      "K": 2.96,
       "zone_id": "zone_6",
-      "current_N": 49.75,
-      "current_P": 12.46,
-      "current_K": 165.3
+      "current_N": 36.51,
+      "current_P": 10.21,
+      "current_K": 170.37
     },
     "S6_6": {
       "N": 0,
-      "P": 0.13,
-      "K": 3.65,
+      "P": 0,
+      "K": 4.44,
       "zone_id": "zone_6",
-      "current_N": 42.53,
-      "current_P": 20.71,
-      "current_K": 163.48
+      "current_N": 49.92,
+      "current_P": 22.05,
+      "current_K": 155.61
     },
     "S6_7": {
       "N": 0,
       "P": 0,
-      "K": 5.54,
+      "K": 5.0,
       "zone_id": "zone_6",
-      "current_N": 50.0,
-      "current_P": 27.68,
-      "current_K": 144.6
+      "current_N": 44.58,
+      "current_P": 27.23,
+      "current_K": 149.97
     },
     "S6_8": {
       "N": 0,
-      "P": 1.14,
+      "P": 1.2,
       "K": 0,
       "zone_id": "zone_6",
-      "current_N": 43.27,
-      "current_P": 10.57,
-      "current_K": 225.53
+      "current_N": 39.56,
+      "current_P": 10.0,
+      "current_K": 233.84
     },
     "S6_9": {
       "N": 0,
-      "P": 0.93,
-      "K": 5.55,
+      "P": 0.26,
+      "K": 4.29,
       "zone_id": "zone_6",
-      "current_N": 46.03,
-      "current_P": 12.7,
-      "current_K": 144.53
+      "current_N": 47.3,
+      "current_P": 19.44,
+      "current_K": 157.12
     },
     "S7_1": {
       "N": 0,
-      "P": 0.36,
-      "K": 1.57,
+      "P": 0.12,
+      "K": 5.27,
       "zone_id": "zone_7",
-      "current_N": 50.0,
-      "current_P": 18.45,
-      "current_K": 184.3
+      "current_N": 48.38,
+      "current_P": 20.8,
+      "current_K": 147.34
     },
     "S7_2": {
       "N": 0,
-      "P": 1.11,
-      "K": 1.71,
+      "P": 0.3,
+      "K": 6.01,
       "zone_id": "zone_7",
-      "current_N": 50.0,
-      "current_P": 10.91,
-      "current_K": 182.91
+      "current_N": 46.33,
+      "current_P": 18.96,
+      "current_K": 139.9
     },
     "S7_3": {
       "N": 0,
-      "P": 0.34,
-      "K": 4.1,
+      "P": 0.16,
+      "K": 8.0,
       "zone_id": "zone_7",
-      "current_N": 50.0,
-      "current_P": 18.6,
-      "current_K": 159.05
+      "current_N": 47.25,
+      "current_P": 20.38,
+      "current_K": 120.0
     },
     "S7_4": {
-      "N": 0,
-      "P": 0.82,
-      "K": 0.22,
+      "N": 0.33,
+      "P": 0.67,
+      "K": 0.95,
       "zone_id": "zone_7",
-      "current_N": 46.46,
-      "current_P": 13.76,
-      "current_K": 197.8
+      "current_N": 26.73,
+      "current_P": 15.32,
+      "current_K": 190.48
     },
     "S7_5": {
-      "N": 0,
-      "P": 0.9,
-      "K": 0.75,
-      "zone_id": "zone_7",
-      "current_N": 49.44,
-      "current_P": 12.96,
-      "current_K": 192.45
-    },
-    "S7_6": {
-      "N": 0,
-      "P": 0.94,
-      "K": 2.32,
-      "zone_id": "zone_7",
-      "current_N": 41.06,
-      "current_P": 12.59,
-      "current_K": 176.78
-    },
-    "S7_7": {
-      "N": 0,
-      "P": 0.41,
-      "K": 3.17,
-      "zone_id": "zone_7",
-      "current_N": 47.51,
-      "current_P": 17.9,
-      "current_K": 168.29
-    },
-    "S7_8": {
       "N": 0,
       "P": 0,
       "K": 0,
       "zone_id": "zone_7",
-      "current_N": 34.64,
-      "current_P": 22.12,
-      "current_K": 223.36
+      "current_N": 45.67,
+      "current_P": 22.32,
+      "current_K": 235.12
+    },
+    "S7_6": {
+      "N": 0,
+      "P": 0.58,
+      "K": 4.67,
+      "zone_id": "zone_7",
+      "current_N": 34.39,
+      "current_P": 16.23,
+      "current_K": 153.28
+    },
+    "S7_7": {
+      "N": 0,
+      "P": 0.11,
+      "K": 7.9,
+      "zone_id": "zone_7",
+      "current_N": 50.0,
+      "current_P": 20.87,
+      "current_K": 120.95
+    },
+    "S7_8": {
+      "N": 1.16,
+      "P": 0.32,
+      "K": 2.61,
+      "zone_id": "zone_7",
+      "current_N": 18.44,
+      "current_P": 18.83,
+      "current_K": 173.87
     },
     "S7_9": {
-      "N": 0,
+      "N": 0.17,
       "P": 1.2,
-      "K": 1.12,
+      "K": 1.1,
       "zone_id": "zone_7",
-      "current_N": 37.22,
+      "current_N": 28.3,
       "current_P": 10.0,
-      "current_K": 188.8
+      "current_K": 189.0
     }
   },
   "cost_estimate": {
-    "water_cost": 172.42,
-    "electricity_cost": 16.55,
-    "fertilizer_cost": 94.15,
-    "total_cost": 283.13,
+    "water_cost": 172.28,
+    "electricity_cost": 16.54,
+    "fertilizer_cost": 95.1,
+    "total_cost": 283.91,
     "details": {
-      "water_volume_m3": 344.85,
-      "N_kg": 0.0,
-      "N_cost": 0.0,
-      "P_kg": 19.7,
-      "P_cost": 29.55,
-      "K_kg": 80.75,
-      "K_cost": 64.6
+      "water_volume_m3": 344.55,
+      "N_kg": 2.05,
+      "N_cost": 2.46,
+      "P_kg": 17.25,
+      "P_cost": 25.88,
+      "K_kg": 83.45,
+      "K_cost": 66.76
     }
   }
 }

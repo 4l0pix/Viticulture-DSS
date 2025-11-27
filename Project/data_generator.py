@@ -11,7 +11,6 @@ class VineyardDataGenerator:
         today = datetime.now()
         self.start_date = today - timedelta(days=730)
         self.historical_days = 730  # two-year span
-        self.forecast_days = 30  # 30-day forecast
         
         # seasonal profile for crete
         self.seasonal_profiles = {
@@ -37,7 +36,7 @@ class VineyardDataGenerator:
         return self.seasonal_profiles['spring']  # default fallback
         
     def generate_all_data(self):
-        dates = pd.date_range(self.start_date, periods=self.historical_days + self.forecast_days, freq='D')
+        dates = pd.date_range(self.start_date, periods=self.historical_days, freq='D')
         # drop time part
         dates = dates.date
         weather_data = self._generate_weather(dates)
@@ -80,13 +79,32 @@ class VineyardDataGenerator:
         solar = 200 + 150 * np.sin(2 * np.pi * np.arange(n) / 365) + np.random.normal(0, 20, n)
         solar = np.clip(solar, 50, 400)
         
+        # generate cloud coverage (0-100%)
+        cloud_coverage = 30 + 40 * np.sin(2 * np.pi * (np.arange(n) + 150) / 365) + np.random.normal(0, 15, n)
+        cloud_coverage = np.clip(cloud_coverage, 0, 100)
+        
+        # generate wind speed (0-25 m/s, seasonal variation)
+        wind_speed = 5 + 3 * np.sin(2 * np.pi * (np.arange(n) + 30) / 365) + np.random.exponential(2, n)
+        wind_speed = np.clip(wind_speed, 0, 25)
+        
+        # generate wind direction (0-360 degrees)
+        # prevailing winds in crete are from northwest (315°) in summer, southeast (135°) in winter
+        seasonal_wind = np.where(
+            np.isin([(d.month) for d in dates], [6, 7, 8]),  # summer months
+            315 + np.random.normal(0, 45, n),  # northwest winds
+            135 + np.random.normal(0, 60, n)   # southeast winds
+        )
+        wind_direction = seasonal_wind % 360  # ensure 0-360 range
+        
         return pd.DataFrame({
             'date': dates,
-            'temperature': temp,
-            'rainfall': rainfall,
-            'humidity': humidity,
-            'solar_radiation': solar,
-            'is_forecast': [i >= self.historical_days for i in range(n)]
+            'temperature': np.round(temp, 2),
+            'rainfall': np.round(rainfall, 2),
+            'humidity': np.round(humidity, 2),
+            'solar_radiation': np.round(solar, 2),
+            'cloud_coverage': np.round(cloud_coverage, 2),
+            'wind_speed': np.round(wind_speed, 2),
+            'wind_direction': np.round(wind_direction, 2)
         })
     
     def _generate_sensor_data(self, dates, weather_data):
@@ -129,10 +147,7 @@ class VineyardDataGenerator:
                     evap_effect = temp_effect - humidity_effect + weather_data.loc[i, 'solar_radiation'] * 0.01
                     drainage = moisture[i-1] * drainage_rate
                     
-                    # boost depletion in forecast
-                    future_factor = 1.0 + (0.3 * (i - self.historical_days) / self.forecast_days) if i >= self.historical_days else 1.0
-                    
-                    moisture[i] = moisture[i-1] + rain_effect - (evap_effect * future_factor) - drainage + base_moisture_offset * 0.02 + np.random.normal(0, 1.5)
+                    moisture[i] = moisture[i-1] + rain_effect - evap_effect - drainage + base_moisture_offset * 0.02 + np.random.normal(0, 1.5)
                     moisture[i] = np.clip(moisture[i], 10, 40)
                 
                 # sensor ph baseline
@@ -147,11 +162,8 @@ class VineyardDataGenerator:
                 N_base_offset = np.random.uniform(-3, 3)  # nitrogen bias
                 
                 for i in range(1, len(dates)):
-                    # boost depletion for forecast
-                    future_factor = 1.0 + (0.5 * (i - self.historical_days) / self.forecast_days) if i >= self.historical_days else 1.0
-                    
-                    N[i] = N[i-1] - (N_depletion * future_factor) + N_base_offset * 0.03 + np.random.normal(0, 1.2)
-                    if i % 90 == 0 and i < self.historical_days:  # quarterly fertilization history
+                    N[i] = N[i-1] - N_depletion + N_base_offset * 0.03 + np.random.normal(0, 1.2)
+                    if i % 90 == 0:  # quarterly fertilization history
                         N[i] += np.random.uniform(10, 20)  # variable boost
                     N[i] = np.clip(N[i], 10, 50)
                 
@@ -177,13 +189,13 @@ class VineyardDataGenerator:
                         'date': date,
                         'sensor_id': sensor['sensor_id'],
                         'zone_id': zone_id,
-                        'ground_moisture': moisture[i],
-                        'temperature': sensor_temp,
-                        'humidity': sensor_humidity,
-                        'pH': pH[i],
-                        'nutrient_N': N[i],
-                        'nutrient_P': P[i],
-                        'nutrient_K': K[i]
+                        'ground_moisture': round(moisture[i], 2),
+                        'temperature': round(sensor_temp, 2),
+                        'humidity': round(sensor_humidity, 2),
+                        'pH': round(pH[i], 2),
+                        'nutrient_N': round(N[i], 2),
+                        'nutrient_P': round(P[i], 2),
+                        'nutrient_K': round(K[i], 2)
                     })
         return pd.DataFrame(rows)
     
@@ -206,7 +218,7 @@ class VineyardDataGenerator:
                     'date': date,
                     'zone_id': zone_id,
                     'growth_stage': stage,
-                    'health_index': health
+                    'health_index': round(health, 2)
                 })
         return pd.DataFrame(rows)
     
@@ -214,23 +226,23 @@ class VineyardDataGenerator:
         rows = []
         for zone_id in self.config['sensors'].keys():
             for i, date in enumerate(dates):
-                if i < self.historical_days and i % 14 == 0:  # fortnight irrigation history
+                if i % 14 == 0:  # fortnight irrigation history
                     rows.append({
                         'date': date,
                         'zone_id': zone_id,
-                        'water_applied': np.random.uniform(15, 25),
+                        'water_applied': round(np.random.uniform(15, 25), 2),
                         'fertilizer_N_applied': 0,
                         'fertilizer_P_applied': 0,
                         'fertilizer_K_applied': 0
                     })
-                if i < self.historical_days and i % 90 == 0:  # quarterly nutrient history
+                if i % 90 == 0:  # quarterly nutrient history
                     rows.append({
                         'date': date,
                         'zone_id': zone_id,
                         'water_applied': 0,
-                        'fertilizer_N_applied': np.random.uniform(5, 10),
-                        'fertilizer_P_applied': np.random.uniform(3, 6),
-                        'fertilizer_K_applied': np.random.uniform(8, 12)
+                        'fertilizer_N_applied': round(np.random.uniform(5, 10), 2),
+                        'fertilizer_P_applied': round(np.random.uniform(3, 6), 2),
+                        'fertilizer_K_applied': round(np.random.uniform(8, 12), 2)
                     })
         return pd.DataFrame(rows)
 
