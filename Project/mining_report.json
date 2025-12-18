@@ -1,21 +1,23 @@
 {
-  "analysis_date": "2025-11-21T21:19:34.497347",
+  "analysis_date": "2025-12-18T09:42:09.412628",
   "data_period": {
-    "start_date": "2025-11-19T00:00:00",
-    "end_date": "2025-12-19T00:00:00",
+    "start_date": "2025-11-17T00:00:00",
+    "end_date": "2025-12-17T00:00:00",
     "total_records": 1302,
     "sensors_count": 42
   },
   "outliers": {
-    "statistical_outliers_count": 283,
+    "statistical_outliers_count": 233,
     "isolation_outliers_count": 131,
-    "total_affected_sensors": 41
+    "total_affected_sensors": 34
   },
   "spatial_clustering": {
-    "clusters_found": 2,
+    "clusters_found": 4,
     "cluster_distribution": {
-      "0": 31,
-      "1": 11
+      "0": 15,
+      "1": 13,
+      "2": 10,
+      "3": 4
     }
   },
   "temporal_clustering": {
@@ -24,60 +26,60 @@
   },
   "anomalies": {
     "anomalous_zones": [
-      "zone_5"
+      "zone_4"
     ],
     "zone_anomaly_scores": {
-      "zone_1": 0.824779039124831,
-      "zone_2": 0.9688549482091556,
-      "zone_3": 0.9629786775708873,
-      "zone_4": 0.46002328056126457,
-      "zone_5": 1.1021853992536723,
-      "zone_6": 0.2341977949988881,
-      "zone_7": 0.3057746374319948
+      "zone_1": 0.17298288437024434,
+      "zone_2": 0.9590062616096651,
+      "zone_3": 0.4852232535970557,
+      "zone_4": 1.4124972275737584,
+      "zone_5": 0.6009680168527457,
+      "zone_6": 0.7257860114315882,
+      "zone_7": 0.22723668595570717
     },
-    "sensors_with_drift": 15,
+    "sensors_with_drift": 22,
     "high_severity_drift": 0
   },
   "data_quality": {
     "ground_moisture": {
       "missing_percentage": 0.0,
-      "outlier_percentage": 20.276497695852534,
-      "coefficient_variation": 7.432486360520123
+      "outlier_percentage": 9.293394777265746,
+      "coefficient_variation": 18.431187224022462
     },
     "temperature": {
       "missing_percentage": 0.0,
       "outlier_percentage": 0.0,
-      "coefficient_variation": 39.19225341368367
+      "coefficient_variation": 33.602792489101205
     },
     "humidity": {
       "missing_percentage": 0.0,
       "outlier_percentage": 0.0,
-      "coefficient_variation": 14.716858781512371
+      "coefficient_variation": 14.300811925573974
     },
     "nutrient_N": {
       "missing_percentage": 0.0,
-      "outlier_percentage": 0.9216589861751152,
-      "coefficient_variation": 11.43065608653912
+      "outlier_percentage": 7.680491551459294,
+      "coefficient_variation": 19.688370402376517
     },
     "nutrient_P": {
       "missing_percentage": 0.0,
-      "outlier_percentage": 0.38402457757296465,
-      "coefficient_variation": 27.43773469058364
+      "outlier_percentage": 0.4608294930875576,
+      "coefficient_variation": 29.62409700623524
     },
     "nutrient_K": {
       "missing_percentage": 0.0,
-      "outlier_percentage": 0.0,
-      "coefficient_variation": 17.25236110773381
+      "outlier_percentage": 0.15360983102918588,
+      "coefficient_variation": 15.420912102181713
     },
     "pH": {
       "missing_percentage": 0.0,
-      "outlier_percentage": 0.15360983102918588,
-      "coefficient_variation": 4.164903174277926
+      "outlier_percentage": 0.30721966205837176,
+      "coefficient_variation": 4.57532770337476
     }
   },
   "recommendations": [
     "high outlier rate detected - consider sensor calibration",
-    "investigate anomalous zones: ['zone_5']",
+    "investigate anomalous zones: ['zone_4']",
     "sensor drift detected - schedule maintenance"
   ]
 }

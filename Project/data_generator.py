@@ -7,10 +7,10 @@ class VineyardDataGenerator:
     def __init__(self, config_path='vineyard_config.json'):
         with open(config_path, 'r') as f:
             self.config = json.load(f)
-        # start two years back
+        # start two years back, include today
         today = datetime.now()
-        self.start_date = today - timedelta(days=730)
-        self.historical_days = 730  # two-year span
+        self.start_date = today - timedelta(days=729)
+        self.historical_days = 730  # two-year span including today
         
         # seasonal profile for crete
         self.seasonal_profiles = {
